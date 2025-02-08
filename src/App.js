@@ -1,28 +1,18 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { makeStyles } from "@mui/styles"; // Correct import
+import Homepage from "./Pages/HomePage";
+import CoinPage from "./Pages/CoinPage";
+import Header from "./components/Header";
 import "./App.css";
-import HomePage from "./pages/HomePage";
-import CoinPage from "./pages/CoinPage";
-import Nav from "./components/Nav";
-
-const useStyles = makeStyles(() => ({
-  app: {
-    backgroundColor: "#14161a",
-    color: "white",
-    minHeight: "100vh", // Fixed 'minheight' typo (should be 'minHeight')
-  },
-}));
 
 function App() {
-  const classes = useStyles(); // Call hook inside component
-  
   return (
     <BrowserRouter>
-      <div className={classes.app}>
-        <Nav />
+      <div style={{ backgroundColor: "#14161a", color: "white", minHeight: "100vh" }}>
+        <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/coin/:id" element={<CoinPage />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/coins/:id" element={<CoinPage />} />
         </Routes>
       </div>
     </BrowserRouter>

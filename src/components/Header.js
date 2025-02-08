@@ -4,10 +4,11 @@ import {
   MenuItem,
   Select,
   Toolbar,
+  Box,
   Typography,
 } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useNavigate } from "react-router-dom"; // ✅ Use `useNavigate`
+import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
 const darkTheme = createTheme({
@@ -15,32 +16,43 @@ const darkTheme = createTheme({
     primary: {
       main: "#fff",
     },
-    mode: "dark", // ✅ Use `mode` instead of `type`
+    mode: "dark",
   },
 });
 
 function Header() {
   const { currency, setCurrency } = CryptoState();
-  const navigate = useNavigate(); // ✅ Replaces `useHistory`
+  const navigate = useNavigate();
 
   return (
     <ThemeProvider theme={darkTheme}>
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <Typography
-              onClick={() => navigate("/")} // ✅ Use `navigate`
-              variant="h6"
-              sx={{
-                flex: 1,
-                color: "gold",
-                fontFamily: "Montserrat",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
+            <Box
+              display="flex"
+              alignItems="center"
+              gap={1}
+              sx={{ cursor: "pointer" }}
+              onClick={() => navigate("/")}
             >
-              Crypto Hunter
-            </Typography>
+              <Box
+                component="img"
+                src="/logo.jpeg"
+                alt="CryptoMa Logo"
+                sx={{ width: 220, height: 60 }} 
+              />
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "gold",
+                  fontFamily: "Montserrat",
+                  fontWeight: "bold",
+                }}
+              >
+                {/* CryptoMa */}
+              </Typography>
+            </Box>
 
             <Select
               variant="outlined"

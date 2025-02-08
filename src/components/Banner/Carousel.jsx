@@ -1,4 +1,4 @@
-import { styled } from "@mui/system"; // ✅ Updated import
+import { styled } from "@mui/system"; 
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
@@ -43,7 +43,7 @@ const Carousel = () => {
         <img
           src={coin?.image}
           alt={coin.name}
-          height="80"
+          height="85"
           style={{ marginBottom: 10 }}
         />
         <span>
@@ -68,18 +68,21 @@ const Carousel = () => {
   return (
     <CarouselWrapper>
       <AliceCarousel
-        mouseTracking
-        infinite
-        autoPlayInterval={1000}
-        animationDuration={1500}
-        disableDotsControls
-        disableButtonsControls
-        responsive={responsive}
-        items={items}
-        autoPlay
+       mouseTracking
+       infinite
+       autoPlay
+       autoPlayStrategy="none" 
+       autoPlayInterval={1000} 
+       animationDuration={1000} 
+       disableDotsControls
+       disableButtonsControls
+       responsive={responsive}
+       items={items}
+       touchTracking={false}
       />
     </CarouselWrapper>
   );
+  
 };
 
 export default Carousel;

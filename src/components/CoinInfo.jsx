@@ -7,11 +7,24 @@ import {
   ThemeProvider,
   createTheme,
 } from "@mui/material";
-import { styled } from "@mui/system"; // ✅ Fix makeStyles
+import { styled } from "@mui/system";
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
 
+// ✅ Import and register necessary Chart.js components
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const Container = styled("div")(({ theme }) => ({
   width: "75%",

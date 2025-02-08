@@ -24,7 +24,7 @@ export default function Banner() {
             src="/logo.jpeg"
             alt="CryptoMa Logo"
             
-            sx={{ width: 390, height: 220, marginBottom: 1 }}
+            sx={{ width: 390, height: 180, marginBottom: 1 }}
           />
           <Typography
             variant="h2"

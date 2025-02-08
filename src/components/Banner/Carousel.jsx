@@ -82,6 +82,7 @@ const Carousel = () => {
       />
     </CarouselWrapper>
   );
+  
 };
 
 export default Carousel;

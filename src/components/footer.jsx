@@ -23,7 +23,7 @@ const Footer = () => {
         gap: 1.5,
       }}
     >
-      {/* Logo */}
+      
       <Box
         component="img"
         src="/logo.jpeg" 
@@ -45,7 +45,7 @@ const Footer = () => {
         {currentDate}
       </Typography>
 
-      {/* Footer Text */}
+      
       <Typography variant="body2" sx={{ fontFamily: "Montserrat", fontSize: 14 }}>
         © {new Date().getFullYear()} CryptoMa. All rights reserved.
       </Typography>

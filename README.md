@@ -1,3 +1,11 @@
+CryptoMa is a cutting-edge cryptocurrency tracking website built with React, offering real-time updates on the latest cryptocurrency values. With an intuitive and visually engaging interface, users can monitor market trends, track price fluctuations, and explore detailed information on each cryptocurrency.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -2,11 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { HistoricalChart } from "../config/api";
 import { Line } from "react-chartjs-2";
-import {
-  CircularProgress,
-  ThemeProvider,
-  createTheme,
-} from "@mui/material";
+import { CircularProgress, ThemeProvider, createTheme } from "@mui/material";
 import { styled } from "@mui/system";
 import SelectButton from "./SelectButton";
 import { chartDays } from "../config/data";
@@ -24,7 +20,15 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const Container = styled("div")(({ theme }) => ({
   width: "75%",

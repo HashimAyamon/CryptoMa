@@ -40,7 +40,7 @@ function Header() {
                 component="img"
                 src="/logo.jpeg"
                 alt="CryptoMa Logo"
-                sx={{ width: 220, height: 60 }} 
+                sx={{ width: 220, height: 60 }}
               />
               <Typography
                 variant="h6"

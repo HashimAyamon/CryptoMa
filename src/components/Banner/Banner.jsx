@@ -47,7 +47,7 @@ export default function Banner() {
             fontWeight: "medium",
           }}
         >
-          Stay informed with the latest updates on your favorite cryptocurrency.
+          Keep up with the latest trends and updates on your favorite cryptocurrency.
         </Typography>
       </Container>
       <Carousel />

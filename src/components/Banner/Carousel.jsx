@@ -1,4 +1,4 @@
-import { styled } from "@mui/system"; 
+import { styled } from "@mui/system";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
@@ -48,7 +48,12 @@ const Carousel = () => {
         />
         <span>
           {coin?.symbol.toUpperCase()} &nbsp;
-          <span style={{ color: profit ? "rgb(14, 203, 129)" : "red", fontWeight: 500 }}>
+          <span
+            style={{
+              color: profit ? "rgb(14, 203, 129)" : "red",
+              fontWeight: 500,
+            }}
+          >
             {profit && "+"}
             {coin?.price_change_percentage_24h?.toFixed(2)}%
           </span>
@@ -68,21 +73,20 @@ const Carousel = () => {
   return (
     <CarouselWrapper>
       <AliceCarousel
-       mouseTracking
-       infinite
-       autoPlay
-       autoPlayStrategy="none" 
-       autoPlayInterval={1000} 
-       animationDuration={1000} 
-       disableDotsControls
-       disableButtonsControls
-       responsive={responsive}
-       items={items}
-       touchTracking={false}
+        mouseTracking
+        infinite
+        autoPlay
+        autoPlayStrategy="none"
+        autoPlayInterval={1000}
+        animationDuration={1000}
+        disableDotsControls
+        disableButtonsControls
+        responsive={responsive}
+        items={items}
+        touchTracking={false}
       />
     </CarouselWrapper>
   );
-  
 };
 
 export default Carousel;

@@ -11,7 +11,7 @@ const BannerWrapper = styled("div")({
   alignItems: "center",
   textAlign: "center",
   backgroundSize: "cover",
-  backgroundRepeat: "no-repeat"
+  backgroundRepeat: "no-repeat",
 });
 
 export default function Banner() {
@@ -23,7 +23,6 @@ export default function Banner() {
             component="img"
             src="/logo.jpeg"
             alt="CryptoMa Logo"
-            
             sx={{ width: 390, height: 180, marginBottom: 1 }}
           />
           <Typography
@@ -47,7 +46,8 @@ export default function Banner() {
             fontWeight: "medium",
           }}
         >
-          Keep up with the latest trends and updates on your favorite cryptocurrency.
+          Keep up with the latest trends and updates on your favorite
+          cryptocurrency.
         </Typography>
       </Container>
       <Carousel />

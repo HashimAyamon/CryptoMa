@@ -55,7 +55,7 @@ export default function CoinsTable() {
       primary: {
         main: "#fff",
       },
-      mode: "dark", 
+      mode: "dark",
     },
   });
 
